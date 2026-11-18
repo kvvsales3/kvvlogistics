@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f4ef" />
+  <meta name="description" content="KVV Logistics provides dependable warehouse and logistics support, from EPT driving to loading and unloading boxes." />
+  <title>KVV Logistics — Ready to move</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#17231e; --muted:#66716b; --paper:#f5f4ef; --green:#c8f169; --line:#dfe1d9; --dark:#17231e; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:'DM Sans',sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1160px, calc(100% - 48px)); margin:auto; }
+    .topbar { height:82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:11px; font:700 20px 'Space Grotesk',sans-serif; letter-spacing:-.7px; }
+    .brand-mark { display:grid; place-items:center; width:36px; height:36px; background:var(--green); border-radius:50%; font-size:17px; }
+    .nav { display:flex; align-items:center; gap:34px; font-size:13px; font-weight:600; }
+    .nav a:not(.nav-cta):hover { opacity:.62; }
+    .nav-cta { padding:12px 18px; border:1px solid var(--ink); border-radius:3px; transition:.2s; }
+    .nav-cta:hover { color:white; background:var(--ink); }
+    .hero { display:grid; grid-template-columns:1fr .95fr; align-items:center; gap:56px; padding:76px 0 84px; }
+    .eyebrow { display:flex; align-items:center; gap:10px; text-transform:uppercase; letter-spacing:1.6px; font-size:10px; font-weight:700; color:#5d6b60; }
+    .eyebrow:before { content:''; width:22px; height:2px; background:#75a928; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font:600 clamp(48px,6.6vw,82px)/.99 'Space Grotesk',sans-serif; letter-spacing:-5px; margin:23px 0 24px; max-width:620px; }
+    h1 span { color:#789c38; }
+    .hero-copy { max-width:445px; color:var(--muted); font-size:16px; line-height:1.75; margin-bottom:30px; }
+    .button { display:inline-flex; align-items:center; gap:17px; padding:15px 20px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; border-radius:3px; transition:transform .2s, background .2s; }
+    .button:hover { transform:translateY(-2px); background:#304538; }
+    .arrow { color:var(--green); font-size:18px; }
+    .hero-note { display:flex; align-items:center; gap:12px; margin-top:31px; font-size:11px; color:var(--muted); }
+    .note-dot { width:8px; height:8px; border-radius:50%; background:#82b934; box-shadow:0 0 0 4px #e2edcf; }
+    .hero-visual { position:relative; min-height:475px; background:#d2d4c9; overflow:hidden; border-radius:4px; }
+    .hero-visual img { width:100%; height:475px; object-fit:cover; display:block; filter:brightness(.83); }
+    .visual-overlay { position:absolute; inset:auto 0 0; padding:54px 27px 25px; color:white; background:linear-gradient(transparent,rgba(13,25,18,.75)); }
+    .visual-overlay strong { display:block; font:500 24px 'Space Grotesk',sans-serif; }
+    .visual-overlay span { font-size:12px; color:#e4e9e3; }
+    .visual-tag { position:absolute; top:20px; left:20px; background:var(--green); padding:10px 13px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; }
+    .statline { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:25px 0; }
+    .stat { display:flex; justify-content:center; gap:12px; align-items:center; border-right:1px solid var(--line); }
+    .stat:last-child { border:0; }
+    .stat b { font:600 16px 'Space Grotesk',sans-serif; }
+    .stat span { color:var(--muted); font-size:11px; }
+    .section { padding:105px 0; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:38px; }
+    h2 { font:600 clamp(35px,4.4vw,54px)/1.05 'Space Grotesk',sans-serif; letter-spacing:-2.5px; margin:15px 0 0; max-width:560px; }
+    .section-intro { max-width:360px; color:var(--muted); font-size:14px; line-height:1.7; margin:0; }
+    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .service { min-height:248px; padding:26px; border:1px solid var(--line); background:#f8f8f4; transition:.2s; }
+    .service:hover { transform:translateY(-4px); border-color:#a9c57b; }
+    .service-num { color:#789c38; font:600 12px 'Space Grotesk',sans-serif; }
+    .service-icon { display:grid; place-items:center; width:44px; height:44px; margin:31px 0 21px; border-radius:50%; background:#e9efdf; font-size:19px; }
+    .service h3 { font:600 20px 'Space Grotesk',sans-serif; letter-spacing:-.5px; margin-bottom:10px; }
+    .service p { color:var(--muted); line-height:1.65; font-size:13px; margin:0; }
+    .about { background:var(--dark); color:#fff; }
+    .about-grid { display:grid; grid-template-columns:.9fr 1fr; gap:90px; align-items:center; }
+    .about .eyebrow { color:#bdcaaf; }
+    .about h2 { margin-bottom:22px; }
+    .about-copy { color:#bcc6bf; font-size:14px; line-height:1.8; max-width:470px; }
+    .checklist { border-top:1px solid #3c4940; }
+    .check { display:flex; gap:16px; align-items:flex-start; padding:21px 0; border-bottom:1px solid #3c4940; }
+    .check-icon { color:var(--green); font-size:16px; }
+    .check strong { display:block; font:500 15px 'Space Grotesk',sans-serif; margin-bottom:5px; }
+    .check span:last-child { display:block; color:#aab5ad; font-size:12px; line-height:1.6; }
+    .contact { padding:100px 0; }
+    .contact-box { display:flex; justify-content:space-between; align-items:center; gap:35px; padding:46px; background:var(--green); }
+    .contact-box h2 { max-width:610px; margin:12px 0 10px; }
+    .contact-box p { color:#48553c; font-size:13px; margin:0; }
+    .contact-box .button { background:var(--ink); white-space:nowrap; }
+    footer { border-top:1px solid var(--line); padding:27px 0; }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:11px; }
+    .footer-inner .brand { color:var(--ink); font-size:16px; }
+    .footer-inner .brand-mark { width:29px; height:29px; font-size:14px; }
+    @media(max-width:760px) {
+      .wrap { width:min(100% - 36px,560px); }
+      .topbar { height:70px; }
+      .nav { gap:14px; }
+      .nav a:not(.nav-cta) { display:none; }
+      .nav-cta { padding:10px 12px; }
+      .hero { grid-template-columns:1fr; gap:38px; padding:58px 0 55px; }
+      h1 { letter-spacing:-3.5px; }
+      .hero-visual,.hero-visual img { min-height:330px; height:330px; }
+      .statline { gap:10px; }
+      .stat { flex-direction:column; text-align:center; gap:5px; }
+      .stat b { font-size:14px; }
+      .section { padding:75px 0; }
+      .section-heading { display:block; }
+      .section-intro { margin-top:17px; }
+      .services { grid-template-columns:1fr; }
+      .service { min-height:210px; }
+      .service-icon { margin:20px 0 15px; }
+      .about-grid { grid-template-columns:1fr; gap:30px; }
+      .contact { padding:70px 0; }
+      .contact-box { display:block; padding:30px 24px; }
+      .contact-box .button { margin-top:24px; }
+      .footer-inner { gap:14px; flex-wrap:wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#home" aria-label="KVV Logistics home"><span class="brand-mark">K</span> KVV LOGISTICS</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#about">About us</a><a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Logistics support that delivers</div>
+        <h1>Ready to<br />move <span>work</span><br />forward.</h1>
+        <p class="hero-copy">From EPT driving to loading and unloading, KVV Logistics brings reliable hands and a get-it-done attitude to your warehouse and transport operations.</p>
+        <a class="button" href="#services">Discover what we do <span class="arrow">→</span></a>
+        <div class="hero-note"><span class="note-dot"></span> Practical support. Dependable people.</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85" alt="Organized warehouse with logistics and shipping boxes" />
+        <span class="visual-tag">On the move, on the job</span>
+        <div class="visual-overlay"><strong>Good work moves goods.</strong><span>Hands-on logistics support for busy operations.</span></div>
+      </div>
+    </section>
+    <div class="wrap statline" aria-label="Our approach">
+      <div class="stat"><b>Hands-on</b><span>Practical from day one</span></div>
+      <div class="stat"><b>Safety-minded</b><span>Care in every movement</span></div>
+      <div class="stat"><b>Ready to help</b><span>Support when work piles up</span></div>
+    </div>
+    <section class="wrap section" id="services">
+      <div class="section-heading">
+        <div><div class="eyebrow">What we bring to the floor</div><h2>Extra hands for the heavy lifting.</h2></div>
+        <p class="section-intro">Reliable help with the day-to-day work that keeps goods moving and operations on schedule.</p>
+      </div>
+      <div class="services">
+        <article class="service"><span class="service-num">01 / WAREHOUSE</span><div class="service-icon" aria-hidden="true">▤</div><h3>Loading &amp; unloading</h3><p>Careful, efficient handling of boxes and goods as they arrive, leave, and move through your operation.</p></article>
+        <article class="service"><span class="service-num">02 / EQUIPMENT</span><div class="service-icon" aria-hidden="true">↗</div><h3>EPT driving</h3><p>Electric pallet truck support to help move pallets smoothly around the warehouse and loading area.</p></article>
+        <article class="service"><span class="service-num">03 / OPERATIONS</span><div class="service-icon" aria-hidden="true">＋</div><h3>Logistics assistance</h3><p>Flexible, practical support for warehouse tasks and busy logistics teams when you need an extra pair of hands.</p></article>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="wrap section about-grid">
+        <div><div class="eyebrow">The KVV way</div><h2>Show up. Work smart. Get it moving.</h2><p class="about-copy">Good logistics is built on people who take care with every task. KVV Logistics is here to make the physical work easier for your team—from the first box to the last pallet.</p></div>
+        <div class="checklist">
+          <div class="check"><span class="check-icon">✳</span><div><strong>Dependable support</strong><span>Ready to help your team keep up with the workload.</span></div></div>
+          <div class="check"><span class="check-icon">✳</span><div><strong>Careful handling</strong><span>Goods and equipment treated with attention and respect.</span></div></div>
+          <div class="check"><span class="check-icon">✳</span><div><strong>Made for real work</strong><span>Practical help focused on getting the job done safely.</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap contact" id="contact">
+      <div class="contact-box"><div><div class="eyebrow">Need a hand?</div><h2>Let’s keep your operation moving.</h2><p>Tell us what kind of logistics support you need and let’s talk.</p></div><a class="button" href="mailto:?subject=Logistics%20support%20enquiry">Get in touch <span class="arrow">↗</span></a></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">K</span> KVV LOGISTICS</a><span>Practical logistics support, ready to move.</span><span>© <span id="year"></span> KVV Logistics</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
